@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # Base de données MariaDB
+  mariadb:
+    image: mariadb:10.6
+    container_name: catalogue-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: microservice_db
+      MYSQL_USER: catalogue_user
+      MYSQL_PASSWORD: catalogue_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - catalogue-network
+
+  # Application Spring Boot
+  app:
+    build: .
+    container_name: catalogue-app
+    depends_on:
+      - mariadb
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_USERNAME: catalogue_user
+      DB_PASSWORD: catalogue_password
+      SERVER_PORT: 8080
+    ports:
+      - "8080:8080"
+    networks:
+      - catalogue-network
+
+volumes:
+  mariadb_data:
+
+networks:
+  catalogue-network:
+    driver: bridge 
