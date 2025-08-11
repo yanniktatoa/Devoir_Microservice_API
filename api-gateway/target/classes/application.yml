@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: department-service
+          uri: lb://department-service
+          predicates:
+            - Path=/api/departments/**
+          filters:
+            - StripPrefix=0
+        - id: team-service
+          uri: lb://team-service
+          predicates:
+            - Path=/api/teams/**
+          filters:
+            - StripPrefix=0
+        - id: eureka-server
+          uri: lb://eureka-server
+          predicates:
+            - Path=/eureka/**
+          filters:
+            - StripPrefix=0
+
+server:
+  port: 9090
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka/
+  instance:
+    prefer-ip-address: true
+    hostname: api-gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.web: DEBUG 

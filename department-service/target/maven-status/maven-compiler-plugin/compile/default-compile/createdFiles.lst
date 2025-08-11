@@ -1,0 +1,6 @@
+com\entreprise\catalogue\department\service\DepartmentService.class
+com\entreprise\catalogue\department\DepartmentServiceApplication.class
+com\entreprise\catalogue\department\dto\DepartmentDTO.class
+com\entreprise\catalogue\department\entity\Department.class
+com\entreprise\catalogue\department\repository\DepartmentRepository.class
+com\entreprise\catalogue\department\controller\DepartmentController.class

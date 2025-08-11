@@ -1,0 +1,8 @@
+com\entreprise\catalogue\team\entity\Team.class
+com\entreprise\catalogue\team\client\DepartmentClient.class
+com\entreprise\catalogue\team\service\TeamService.class
+com\entreprise\catalogue\team\client\DepartmentClient$DepartmentDTO.class
+com\entreprise\catalogue\team\controller\TeamController.class
+com\entreprise\catalogue\team\TeamServiceApplication.class
+com\entreprise\catalogue\team\dto\TeamDTO.class
+com\entreprise\catalogue\team\repository\TeamRepository.class
