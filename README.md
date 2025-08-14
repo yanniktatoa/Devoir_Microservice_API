@@ -25,7 +25,7 @@ Ou faites
 _____________________________________________________________________
 
 # Test avec Postman
-Copier et coller le fichier json Microservices_Postman_Collection.json
+Copier et coller le fichier json Microservices_Postman_Collection.json pour importer la collection
 
 ________________________________________________________________________
 
