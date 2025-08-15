@@ -1,11 +1,40 @@
 # Devoir_Microservice_API
-# Prérequis
+# 🚀Prérequis
     Java 17 
     Docker/ Docker desktop
     Spring boot
     maven
     maria_db
-# Test
+# 📁Structure du Projet
+
+    Examen_Microservice_API/
+    ├── 🔍 eureka-server/         # Service de découverte (port 8761)
+    ├── 📦 api-gateway/           # Passerelle API (port 8080)
+    ├── 🏢 department-service/    # Gestion des départements (port 8081)
+    ├── 👥 team-service/          # Gestion des équipes (port 8082)
+    ├── 🐳 docker-compose.yml     # Orchestration des services
+    ├── 📄 README.md              # Documentation
+# ✨Fonctionnalités
+
+    🏢 Gestion des Départements
+    - CRUD complet : Création, lecture, mise à jour et suppression des départements
+    - Recherche : Recherche de départements par nom
+    - Validation : Contrôle de l'unicité des noms de départements
+    - Intégrité : Protection contre la suppression de départements contenant des équipes
+
+    👥 Gestion des Équipes
+    - CRUD complet : Création, lecture, mise à jour et suppression des équipes
+    - Association : Liaison automatique avec les départements
+    - Recherche : Recherche d'équipes par nom et par département
+    - Validation : Vérification de l'existence du département parent
+
+    🔍 Fonctionnalités Avancées
+    - API REST : Endpoints RESTful complets avec codes de statut HTTP appropriés
+    - Validation des données : Validation automatique des entrées utilisateur
+    - Gestion d'erreurs : Messages d'erreur détaillés et personnalisés
+    - Base de données : Support H2 en mémoire pour le développement
+    - Documentation : Collection Postman et exemples cURL inclus
+# 🧪Test
 Lancer le fichier start-microservices.bat
 
 <img width="1475" height="368" alt="Capture d'écran 2025-08-11 143253" src="https://github.com/user-attachments/assets/d0341de5-70ad-49f8-bd5f-decdcdac0cca" />
@@ -24,7 +53,7 @@ Ou faites
 
 _____________________________________________________________________
 
-# Test avec Postman
+# 🧪Test avec Postman
 Copier et coller le fichier json Microservices_Postman_Collection.json pour importer la collection
 
 ________________________________________________________________________
