@@ -33,7 +33,7 @@
     - Validation des données : Validation automatique des entrées utilisateur
     - Gestion d'erreurs : Messages d'erreur détaillés et personnalisés
     - Base de données : Support H2 en mémoire pour le développement
-    - Documentation : Collection Postman et exemples cURL inclus
+    - Documentation : Collection Postman 
 # 🧪Test
 Lancer le fichier start-microservices.bat
 
